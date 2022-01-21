@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-console",
+  "version": "1.0.0",
+  "description": "1.2 Аргументы командной строки и console",
+  "main": "index.js",
+  "repository": "git@github.com:rpu6HuK87/ndse-10-homeworks.git",
+  "author": "Ruslan Akhmetov <rr.akhmetoff@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "momento": "datetime.js"
+  },   
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
