@@ -7,9 +7,11 @@
   "author": "Ruslan Akhmetov <rr.akhmetoff@gmail.com>",
   "license": "MIT",
   "bin": {
-    "momento": "datetime.js"
-  },   
+    "momento": "datetime.js",
+    "guesser": "guesser.js"
+  },
   "dependencies": {
+    "plural-ru": "^2.0.2",
     "yargs": "^17.3.1"
   }
 }
