@@ -21,7 +21,11 @@ const mw = argv => {
         if(l == 2) err = 'Не указана дополнительная опция'
         else {
           let num = Object.values(argv)[1]
-          if(isNaN(num) || num < 1) err = 'Опция [' + Object.keys(argv)[1] +  '] должна быть положительным числом'
+          if(!isNaN(num) && !Number.isInteger(num)) {
+            num = Math.ceil(num)
+            console.log('ВНИМАНИЕ!!! Значение опции должно быть целым числом. Округлено до ' + num)
+          }
+          if(isNaN(num) || num < 1) err = 'Опция [' + Object.keys(argv)[1] +  '] должна быть положительным целым числом'
           else argv.trueval = (argv._[0] == 'sub') ? -num : num
         }
         
@@ -63,7 +67,7 @@ const opts = {
     number: true,
     requiresArg: true
   },
-  'date': {
+  'day': {
     alias: 'd',
     number: true,
     requiresArg: true
