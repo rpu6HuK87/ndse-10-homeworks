@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-stream",
+  "version": "1.0.0",
+  "description": "1.4 Потоки. Модули: fs, path",
+  "main": "index.js",
+  "repository": "git@github.com:rpu6HuK87/ndse-10-homeworks.git",
+  "author": "Ruslan Akhmetov <rr.akhmetoff@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "toss": "headsortails.js"
+  },
+  "dependencies": {
+    "yargs": "^17.3.1"
+  }
+}
