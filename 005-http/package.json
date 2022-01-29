@@ -1,0 +1,18 @@
+{
+  "name": "nodejs-http",
+  "version": "1.0.0",
+  "description": "1.5 http-module. Переменные окружения",
+  "main": "index.js",
+  "repository": "git@github.com:rpu6HuK87/ndse-10-homeworks.git",
+  "author": "Ruslan Akhmetov <rr.akhmetoff@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "pogoda": "getweatherinfo.js"
+  },
+  "dependencies": {    
+    "yargs": "^17.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^14.3.2"
+  }
+}
