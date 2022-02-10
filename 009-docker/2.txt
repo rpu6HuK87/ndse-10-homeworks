@@ -1,0 +1,49 @@
+1===========================
+
+$ docker rmi busybox
+Untagged: busybox:latest
+Untagged: busybox@sha256:afcc7f1ac1b49db317a7196c902e61c6c3c4607d63599ee1a82d702d249a0ccb
+Deleted: sha256:ec3f0931a6e6b6855d76b2d7b0be30e81860baccd891b2e243280bf1cd8ad710
+Deleted: sha256:d31505fd5050f6b96ca3268d1db58fc91ae561ddf14eaabc41d63ea2ef8c1c6d
+slimpixe@devubun:/var/projects/ndse-10-homeworks$ docker pull node:15.14
+15.14: Pulling from library/node
+bfde2ec33fbc: Pull complete 
+787f5e2f1047: Pull complete 
+7b6173a10eb8: Pull complete 
+dc05be471d51: Pull complete 
+55fab5cadd3c: Pull complete 
+bd821d20ef8c: Pull complete 
+6041b69671c6: Pull complete 
+989c5d2d2313: Pull complete 
+4b57d41e8391: Pull complete 
+Digest: sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627
+Status: Downloaded newer image for node:15.14
+docker.io/library/node:15.14
+
+2===========================
+
+$ docker run -it -e NAME=Руслан -e SURNAME=Ахметов --name mynode node:15.14
+Welcome to Node.js v15.14.0.
+Type ".help" for more information.
+> 
+
+3===========================
+
+`Привет, ${process.env.NAME} ${process.env.SURNAME}!`
+'Привет, Руслан Ахметов!'
+> 
+
+4===========================
+
+> .exit
+$
+
+5===========================
+
+$ docker rmi node:15.14
+Error response from daemon: conflict: unable to remove repository reference "node:15.14" (must force) - container ea2dff6c27a4 is using its referenced image 3d3f41722daf
+
+$ docker rmi -f node:15.14
+Untagged: node:15.14
+Untagged: node@sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627
+Deleted: sha256:3d3f41722daf1a77c34d6eade6676bbffa2d6a2a21095de2ab0c427a5c942fc9
